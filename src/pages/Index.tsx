@@ -91,7 +91,7 @@ const SectionIntro = ({ eyebrow, title, children }: { eyebrow?: string; title: R
 
 const ChatBubble = ({ from, name, text, source }: { from: "user" | "bot"; name?: string; text: string; source?: string }) => (
   <div className={`flex ${from === "user" ? "justify-end" : "justify-start"}`}>
-    <div className={`max-w-[88%] rounded-2xl px-4 py-3 text-sm shadow-soft ${from === "user" ? "rounded-br-sm bg-primary-soft text-foreground" : "rounded-bl-sm bg-card text-foreground"}`}>
+    <div className={`max-w-[86%] rounded-xl px-3 py-2 text-xs shadow-soft ${from === "user" ? "rounded-br-sm bg-primary-soft text-foreground" : "rounded-bl-sm bg-card text-foreground"}`}>
       {name && <p className="mb-1 text-xs font-medium text-primary">{name}</p>}
       <p className="whitespace-pre-line leading-relaxed">{text}</p>
       {source && <p className="mt-2 text-[11px] text-muted-foreground">Kaynak: <span className="text-primary">{source}</span></p>}
@@ -100,19 +100,19 @@ const ChatBubble = ({ from, name, text, source }: { from: "user" | "bot"; name?:
 );
 
 const FlowCard = () => (
-  <div className="mt-4 rounded-2xl border border-border bg-card p-4 shadow-soft">
+  <div className="mt-3 rounded-xl border border-border bg-card p-3 shadow-soft">
     <p className="text-xs font-medium text-muted-foreground">Otomatik akış</p>
-    <div className="mt-3 grid gap-2 text-xs sm:grid-cols-4">
+    <div className="mt-2 grid grid-cols-2 gap-2 text-[11px]">
       {[
         [MessageCircle, "WhatsApp mesajı"],
         [BrainCircuit, "Anlamlandırma"],
         [Database, "CRM kaydı"],
         [BarChart3, "Yönetici içgörüsü"],
       ].map(([Icon, label], index) => (
-        <div key={label as string} className="relative rounded-xl bg-secondary p-3">
-          <Icon className="h-4 w-4 text-primary" />
-          <p className="mt-2 font-medium">{label as string}</p>
-          {index < 3 && <ArrowRight className="absolute -right-3 top-1/2 hidden h-4 w-4 -translate-y-1/2 text-primary sm:block" />}
+        <div key={label as string} className="relative rounded-lg bg-secondary p-2">
+          <Icon className="h-3.5 w-3.5 text-primary" />
+          <p className="mt-1 font-medium leading-tight">{label as string}</p>
+          {index < 3 && index !== 1 && <ArrowRight className="absolute -right-2 top-1/2 h-3 w-3 -translate-y-1/2 text-primary" />}
         </div>
       ))}
     </div>
@@ -121,7 +121,7 @@ const FlowCard = () => (
 
 const Hero = () => (
   <section id="top" className="relative overflow-hidden bg-hero">
-    <div className="container-tight grid items-center gap-12 py-16 md:grid-cols-[0.95fr_1.05fr] md:py-24">
+    <div className="container-tight grid items-center gap-10 py-14 md:grid-cols-[1.05fr_0.95fr] md:py-20">
       <motion.div {...fadeUp}>
         <h1 className="text-5xl leading-[1.05] md:text-6xl">Saha ekibinizin WhatsApp’taki yardımcısı.</h1>
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground md:text-xl">
@@ -143,22 +143,22 @@ const Hero = () => (
       </motion.div>
 
       <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.1 }}>
-        <div className="relative mx-auto max-w-2xl rounded-[2rem] border border-border bg-card p-3 shadow-soft">
-          <div className="rounded-[1.5rem] bg-soft p-4">
-            <div className="mb-4 flex items-center gap-3 border-b border-border/60 pb-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                <MessageCircle className="h-5 w-5" />
+        <div className="relative mx-auto max-w-lg rounded-3xl border border-border bg-card p-2 shadow-soft">
+          <div className="rounded-[1.25rem] bg-soft p-3">
+            <div className="mb-3 flex items-center gap-2 border-b border-border/60 pb-2">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                <MessageCircle className="h-4 w-4" />
               </div>
               <div>
-                <p className="text-sm font-medium">saha.team Asistan</p>
+                <p className="text-xs font-medium">saha.team Asistan</p>
                 <p className="text-[11px] text-primary">çevrimiçi</p>
               </div>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-2">
               <ChatBubble from="user" name="Ayşe · Mağaza" text="Müşteri faturasız iade istiyor, ne yapayım?" />
-              <ChatBubble from="bot" name="saha.team" text={'3 adımda ilerleyebilirsin Ayşe:\n\n1. Müşterinin kimliğini al\n2. Kasada “İade İzni” menüsünü seç\n3. Müdür onayını sisteme gir\n\nBu konu bugün 7. kez soruldu. Merkez panelde “iade prosedürü eğitim ihtiyacı” olarak işaretlendi.'} source="İade Politikası.pdf · sf.4" />
+              <ChatBubble from="bot" name="saha.team" text={'3 adımda ilerleyebilirsin:\n1. Kimliği al\n2. “İade İzni” menüsünü seç\n3. Müdür onayını gir\n\nBu konu bugün 7. kez soruldu; panelde eğitim ihtiyacı olarak işaretlendi.'} source="İade Politikası.pdf · sf.4" />
               <ChatBubble from="user" name="Ahmet · Teknik Servis" text="304 numaralı odada klima tekrar arızalandı. Fotoğrafı ekledim." />
-              <ChatBubble from="bot" name="saha.team" text={'Kayıt oluşturuldu.\n\nOlay türü: Tekrarlayan arıza\nLokasyon: Oda 304\nEkipman: Klima\nÖncelik: Yüksek\nGeçmiş: Son 14 günde 2. arıza bildirimi\n\nBakım ekibine görev açıldı. Haftalık rapora eklendi.'} />
+              <ChatBubble from="bot" name="saha.team" text={'Kayıt oluşturuldu.\nOlay: Tekrarlayan arıza\nLokasyon: Oda 304\nÖncelik: Yüksek\n\nBakım ekibine görev açıldı.'} />
             </div>
             <FlowCard />
           </div>
