@@ -50,10 +50,6 @@ const menuItems = [
   ["Nasıl çalışır", "#nasil"],
   ["Özellikler", "#ozellikler"],
   ["Sektörler", "#sektorler"],
-  ["Entegrasyonlar", "#entegrasyonlar"],
-  ["Fiyatlandırma", "#fiyatlandirma"],
-  ["SSS", "#sss"],
-  ["İletişim", "#iletisim"],
 ];
 
 const Nav = () => (
