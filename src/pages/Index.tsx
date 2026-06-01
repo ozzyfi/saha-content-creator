@@ -74,7 +74,7 @@ const Nav = () => (
           <a href="#iletisim">Demo Al</a>
         </Button>
         <Button asChild size="sm" className="rounded-full">
-          <a href="#iletisim"><MessageCircle className="h-4 w-4" /> WhatsApp'tan Dene</a>
+          <a href="https://wa.me/905555555555?text=Merhaba%2C%20saha.team%27i%20denemek%20istiyorum."><MessageCircle className="h-4 w-4" /> WhatsApp'tan Dene</a>
         </Button>
       </div>
     </div>
