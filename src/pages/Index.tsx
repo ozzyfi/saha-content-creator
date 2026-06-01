@@ -492,9 +492,9 @@ const Pricing = () => {
           ))}
         </div>
         <div className="mt-10 grid gap-5 rounded-2xl border border-border bg-card p-7 text-sm md:grid-cols-3">
-          <div><p className="font-medium">Yıllık ödeme</p><p className="mt-1 text-muted-foreground">%15 indirim</p></div>
-          <div><p className="font-medium">Aylık konuşma aşımı</p><p className="mt-1 text-muted-foreground">Konuşma başına ₺4.50</p></div>
-          <div><p className="font-medium">Konuşma nedir?</p><p className="mt-1 text-muted-foreground">Bir çalışanın bir oturumda sorduğu soru veya yaptığı bildirim ve aldığı cevap = 1 konuşma.</p></div>
+          <div><p className="font-medium">Yıllık ödeme</p><p className="mt-1 text-muted-foreground">%15 indirim — Başlangıç, Büyüme ve Profesyonel planlarına uygulanır.</p></div>
+          <div><p className="font-medium">Aylık konuşma aşımı</p><p className="mt-1 text-muted-foreground">Tüm planlarda konuşma başına ₺4,50.</p></div>
+          <div><p className="font-medium">Konuşma nedir?</p><p className="mt-1 text-muted-foreground">Bir çalışanın bir oturumda yaptığı tek bir soru veya bildirim ve aldığı yanıt = 1 konuşma. 14 gün ücretsiz deneme yalnızca Başlangıç planı için geçerlidir.</p></div>
         </div>
       </div>
     </section>
