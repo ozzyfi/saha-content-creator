@@ -591,7 +591,7 @@ const Footer = () => (
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground"><span className="font-serif text-lg leading-none">s</span></div>
           <span className="text-base font-medium">saha.team</span>
         </div>
-        <p className="mt-4 max-w-md text-sm text-muted-foreground">Saha ekipleri için WhatsApp tabanlı AI yardımcısı.</p>
+        <p className="mt-4 max-w-md text-sm text-muted-foreground">Masabaşı olmayan ekipler için WhatsApp tabanlı operasyon hafızası.</p>
         <p className="mt-4 text-xs text-muted-foreground">WhatsApp: +90 555 555 55 55<br />Telefon: +90 212 555 00 00<br />merhaba@saha.team<br />Maslak No.1 Plaza, Kat 15 — Sarıyer / İstanbul</p>
       </div>
       <div>
