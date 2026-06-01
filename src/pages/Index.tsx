@@ -418,7 +418,7 @@ const Integrations = () => {
 };
 
 const Security = () => {
-  const items = ["KVKK uyumlu veri işleme", "GDPR uyumlu mimari", "Verileriniz AI eğitiminde kullanılmaz", "Rol bazlı erişim", "Şube, bölge ve merkez yetkilendirmesi", "Güvenli veri iletimi", "Veri şifreleme", "Silme hakkı", "İşlem kayıtları", "Kurumsal veri işleme sözleşmesi"];
+  const items = ["KVKK uyumlu veri işleme", "GDPR uyumlu mimari", "Verileriniz AI eğitiminde kullanılmaz", "Rol bazlı erişim", "Şube, bölge ve merkez yetkilendirmesi", "Güvenli veri iletimi", "Veri şifreleme", "Silme hakkı", "İşlem kayıtları", "Kurumsal veri işleme sözleşmesi", "Veri işleme Türkiye ve AB altyapısında", "Asgari veri toplama prensibi"];
   return (
     <section className="border-t border-border bg-soft py-24">
       <div className="container-tight">
