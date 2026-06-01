@@ -199,12 +199,13 @@ const Problem = () => {
     [Database, "CRM ve sistemler eksik kalır", "Sahadan gelen bilgi sisteme işlenmediği için müşteri, ekipman, üretici veya şube geçmişi eksik görünür."],
     [BrainCircuit, "Geçmiş bilgi kişilere bağlı kalır", "Personel değiştiğinde saha hafızası da gider. Yeni gelen çalışan geçmişi bilmez."],
     [BarChart3, "Merkez ofis sahayı geç görür", "Tekrar eden arızalar, sık sorulan prosedürler ve eğitim ihtiyaçları geç fark edilir."],
+    [MessageCircle, "WhatsApp grupları kontrol dışı", "Mağaza grubu, servis grubu, bölge grubu... Kritik bilgi dağınık mesajlar arasında kayboluyor. Aranmıyor, sisteme taşınmıyor, analiz edilemiyor."],
   ];
   return (
     <section className="bg-soft py-24">
       <div className="container-tight">
         <SectionIntro title={<>Sahada her gün kritik bilgi oluşuyor. Ama çoğu WhatsApp’ta kayboluyor.</>}>
-          Müşteri şikâyeti, arıza bildirimi, üretici ziyareti, stok problemi, kalite uyarısı, iade sorusu, fotoğraf, sesli mesaj ve servis formu genelde WhatsApp gruplarında, kişisel telefonlarda veya dağınık Excel dosyalarında kalır.
+          Müşteri şikâyeti, arıza bildirimi, stok problemi, kalite uyarısı, fotoğraf ve sesli mesaj — büyük çoğunluğu WhatsApp gruplarında ya da kişisel telefonlarda kalır. Sisteme girmez, aranmaz, analiz edilemez.
         </SectionIntro>
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {problems.map(([Icon, title, desc], i) => (
