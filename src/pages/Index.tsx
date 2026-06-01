@@ -128,17 +128,17 @@ const Hero = () => (
           Saha ekibiniz WhatsApp’tan yazar, konuşur, fotoğraf ya da doküman gönderir. saha.team doğru cevabı verir, gelen bilgiyi anlamlandırır, ilgili kayda işler ve şirketiniz için kalıcı saha hafızası oluşturur.
         </p>
         <p className="mt-4 text-base font-medium text-foreground">Uygulama yok. Şifre yok. Eğitim yok.</p>
-        <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted-foreground">Ekibiniz zaten kullandığı WhatsApp’tan sorar, bildirir, takip eder.</p>
+        <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted-foreground">QR kodu okutun, WhatsApp'tan mesaj gönderin — başka bir adım yok.</p>
         <div className="mt-8 flex flex-wrap items-center gap-3">
           <Button asChild size="lg" className="rounded-full shadow-glow">
-            <a href="#iletisim">WhatsApp’tan Dene <ArrowRight className="h-4 w-4" /></a>
+            <a href="https://wa.me/905555555555?text=Merhaba%2C%20saha.team%27i%20denemek%20istiyorum.">WhatsApp'tan Dene <ArrowRight className="h-4 w-4" /></a>
           </Button>
           <Button asChild size="lg" variant="outline" className="rounded-full">
             <a href="#iletisim">15 Dakikalık Demo Al</a>
           </Button>
         </div>
         <p className="mt-6 max-w-xl text-sm font-medium leading-relaxed text-foreground">
-          Soru cevaplar. Bilgiyi dataya çevirir. CRM’e işler. Hafıza oluşturur. Kör noktaları gösterir.
+          Soru cevaplar · Bildirimi kayıt eder · CRM'e işler · Kör noktaları gösterir
         </p>
       </motion.div>
 
