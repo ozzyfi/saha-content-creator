@@ -20,7 +20,7 @@ import {
   MapPin,
   MessageCircle,
   Mic,
-  Phone,
+  
   Plug,
   QrCode,
   Search,
@@ -60,10 +60,7 @@ const Nav = () => (
   <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
     <div className="container-tight flex h-16 items-center justify-between gap-4">
       <a href="#top" className="flex items-center gap-2">
-        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-          <span className="font-serif text-lg leading-none">s</span>
-        </div>
-        <span className="text-base font-medium tracking-tight">saha.team</span>
+        <img src="/logo-full.png" alt="saha.team" className="h-8 w-auto" />
       </a>
       <nav className="hidden items-center gap-5 text-sm text-muted-foreground lg:flex">
         {menuItems.map(([label, href]) => (
@@ -563,10 +560,8 @@ const Contact = () => {
             Saha ekibinizin WhatsApp akışını, dokümanlarınızı ve mevcut sistemlerinizi 15 dakikada birlikte değerlendirelim.
           </SectionIntro>
           <div className="mt-8 space-y-4 text-sm">
-            <div className="flex items-center gap-3"><MessageCircle className="h-4 w-4 text-primary" /> <span>WhatsApp: +90 555 555 55 55</span></div>
-            <div className="flex items-center gap-3"><Phone className="h-4 w-4 text-primary" /> <span>Telefon: +90 212 555 00 00</span></div>
-            <div className="flex items-center gap-3"><Mail className="h-4 w-4 text-primary" /> <span>E-posta: merhaba@saha.team</span></div>
-            <div className="flex items-center gap-3"><MapPin className="h-4 w-4 text-primary" /> <span>Maslak No.1 Plaza, Kat 15 — Sarıyer / İstanbul</span></div>
+            <div className="flex items-center gap-3"><Mail className="h-4 w-4 text-primary" /> <span>E-posta: hi@toola.net</span></div>
+            <div className="flex items-center gap-3"><MapPin className="h-4 w-4 text-primary" /> <span>Teknopark İstanbul, Pendik / İstanbul</span></div>
           </div>
         </motion.div>
         <motion.form {...fadeUp} transition={{ duration: 0.5, delay: 0.1 }} onSubmit={(e) => { e.preventDefault(); setSent(true); }} className="rounded-2xl border border-border bg-card p-7 shadow-soft">
@@ -616,12 +611,11 @@ const Footer = () => (
   <footer className="border-t border-border bg-card py-12">
     <div className="container-tight grid gap-10 md:grid-cols-4">
       <div className="md:col-span-2">
-        <div className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground"><span className="font-serif text-lg leading-none">s</span></div>
-          <span className="text-base font-medium">saha.team</span>
+        <div>
+          <img src="/logo-full.png" alt="saha.team" className="h-8 w-auto" />
         </div>
         <p className="mt-4 max-w-md text-sm text-muted-foreground">Masabaşı olmayan ekipler için WhatsApp tabanlı operasyon hafızası.</p>
-        <p className="mt-4 text-xs text-muted-foreground">WhatsApp: +90 555 555 55 55<br />Telefon: +90 212 555 00 00<br />merhaba@saha.team<br />Maslak No.1 Plaza, Kat 15 — Sarıyer / İstanbul</p>
+        <p className="mt-4 text-xs text-muted-foreground">hi@toola.net<br />Teknopark İstanbul, Pendik / İstanbul</p>
       </div>
       <div>
         <p className="text-sm font-medium">Menü</p>
