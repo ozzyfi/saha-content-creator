@@ -475,7 +475,7 @@ const Pricing = () => {
     <section id="fiyatlandirma" className="bg-soft py-24">
       <div className="container-tight">
         <SectionIntro eyebrow="Fiyatlandırma" title={<>Şube sayınıza göre sade fiyatlandırma.</>}>
-          Personel sınırı yok. Gizli ücret yok. İstediğiniz zaman iptal.
+          Personel sınırı yok. Gizli ücret yok. Aylık fatura, önceden taahhüt yok.
         </SectionIntro>
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {plans.map(([name, tag, price, unit, features, cta, highlight], i) => (
