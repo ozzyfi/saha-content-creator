@@ -513,7 +513,9 @@ const FAQ = () => {
     ["Hangi sektörlerde kullanılır?", "Otel, perakende, restoran, teknik servis, tarım-gıda, lojistik, depo, tesis yönetimi, güvenlik, temizlik ve saha satış ekiplerinde kullanılabilir."],
     ["Verilerimiz AI eğitiminde kullanılır mı?", "Hayır. Şirket dokümanlarınız, mesajlarınız ve operasyon verileriniz model eğitimi için kullanılmaz."],
     ["Mevcut dokümanlarımız dağınık. Önce düzenlememiz gerekir mi?", "Hayır. PDF, Word, Excel, Google Drive veya SharePoint üzerindeki mevcut dokümanlarınızla başlanabilir."],
-    ["Kurulum ne kadar sürer?", "Temel kurulum aynı gün içinde yapılabilir. Entegrasyon ihtiyacı varsa süre kullanılan sistemlere göre değişir."],
+    ["WhatsApp Business API nedir, ayrıca hesap açmam gerekiyor mu?", "saha.team kurumsal WhatsApp üzerinden çalıştığı için WhatsApp Business API bağlantısı gereklidir. Bu tek seferlik bir kurulum adımıdır ve Meta'nın onay sürecini (1–3 iş günü) birlikte yürütüyoruz. Mevcut bir iş telefonu numaranız varsa aynı numarayı kullanabilirsiniz."],
+    ["Aylık ve yıllık plan farkı nedir, taahhüt var mı?", "Tüm planlar aylık faturalandırılır, herhangi bir taahhüt yoktur. Yıllık ödemeyi tercih ederseniz Başlangıç, Büyüme ve Profesyonel planlarında %15 indirim uygulanır."],
+    ["Kurulum ne kadar sürer?", "WhatsApp Business API bağlantısı, Meta'nın onay sürecini gerektirdiğinden 1–3 iş günü sürer. Bu süreci sizinle birlikte yürütüyor, gerekli adımlarda rehberlik ediyoruz. API bağlantısı tamamlandıktan sonra asistan kurulumu genellikle aynı gün içinde yapılabilir."],
     ["Hangi dilleri destekler?", "saha.team çok dilli ekiplerde kullanılabilir. Personel kendi dilinde soru sorabilir ve kendi dilinde yanıt alabilir."],
   ];
   return (
