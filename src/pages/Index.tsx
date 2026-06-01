@@ -74,7 +74,7 @@ const Nav = () => (
           <a href="#iletisim">Demo Al</a>
         </Button>
         <Button asChild size="sm" className="rounded-full">
-          <a href="#iletisim"><MessageCircle className="h-4 w-4" /> WhatsApp'tan Dene</a>
+          <a href="https://wa.me/905555555555?text=Merhaba%2C%20saha.team%27i%20denemek%20istiyorum."><MessageCircle className="h-4 w-4" /> WhatsApp'tan Dene</a>
         </Button>
       </div>
     </div>
@@ -128,17 +128,17 @@ const Hero = () => (
           Saha ekibiniz WhatsApp’tan yazar, konuşur, fotoğraf ya da doküman gönderir. saha.team doğru cevabı verir, gelen bilgiyi anlamlandırır, ilgili kayda işler ve şirketiniz için kalıcı saha hafızası oluşturur.
         </p>
         <p className="mt-4 text-base font-medium text-foreground">Uygulama yok. Şifre yok. Eğitim yok.</p>
-        <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted-foreground">Ekibiniz zaten kullandığı WhatsApp’tan sorar, bildirir, takip eder.</p>
+        <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted-foreground">QR kodu okutun, WhatsApp'tan mesaj gönderin — başka bir adım yok.</p>
         <div className="mt-8 flex flex-wrap items-center gap-3">
           <Button asChild size="lg" className="rounded-full shadow-glow">
-            <a href="#iletisim">WhatsApp’tan Dene <ArrowRight className="h-4 w-4" /></a>
+            <a href="https://wa.me/905555555555?text=Merhaba%2C%20saha.team%27i%20denemek%20istiyorum.">WhatsApp'tan Dene <ArrowRight className="h-4 w-4" /></a>
           </Button>
           <Button asChild size="lg" variant="outline" className="rounded-full">
             <a href="#iletisim">15 Dakikalık Demo Al</a>
           </Button>
         </div>
         <p className="mt-6 max-w-xl text-sm font-medium leading-relaxed text-foreground">
-          Soru cevaplar. Bilgiyi dataya çevirir. CRM’e işler. Hafıza oluşturur. Kör noktaları gösterir.
+          Soru cevaplar · Bildirimi kayıt eder · CRM'e işler · Kör noktaları gösterir
         </p>
       </motion.div>
 
@@ -170,10 +170,10 @@ const Hero = () => (
 
 const Metrics = () => {
   const metrics = [
-    ["80+ saat / ay", "Müdürlerin tekrar eden sorulara ayırdığı zamanı azaltın."],
-    ["%99 kaynaklı cevap", "Yanıtlar sadece sizin dokümanlarınıza ve bağlı sistemlerinize dayanır."],
-    ["15 dakikada kurulum", "Dokümanlarınızı yükleyin, WhatsApp numarasını paylaşın, kullanmaya başlayın."],
-    ["CRM’e otomatik kayıt", "Sahadan gelen notlar, fotoğraflar ve bildirimler ilgili kayda işlenir."],
+    ["Aylık 80+ saat", "Müdürün tekrar eden prosedür sorularından kurtarılan zamanı — ekip ve sektöre göre değişir."],
+    ["%100 kaynaklı yanıt", "Cevaplar yalnızca sizin dokümanlarınızdan gelir. Uydurma yok, genel bilgi yok."],
+    ["Aynı gün aktif", "Dokümanlarınızı yükleyin, WhatsApp numaranızı ekleyin; asistan kullanıma hazır."],
+    ["CRM'e otomatik kayıt", "Sahadan gelen not, fotoğraf ve bildirim ilgili kayda otomatik işlenir."],
   ];
   return (
     <section className="border-y border-border bg-card/60">
@@ -199,12 +199,13 @@ const Problem = () => {
     [Database, "CRM ve sistemler eksik kalır", "Sahadan gelen bilgi sisteme işlenmediği için müşteri, ekipman, üretici veya şube geçmişi eksik görünür."],
     [BrainCircuit, "Geçmiş bilgi kişilere bağlı kalır", "Personel değiştiğinde saha hafızası da gider. Yeni gelen çalışan geçmişi bilmez."],
     [BarChart3, "Merkez ofis sahayı geç görür", "Tekrar eden arızalar, sık sorulan prosedürler ve eğitim ihtiyaçları geç fark edilir."],
+    [MessageCircle, "WhatsApp grupları kontrol dışı", "Mağaza grubu, servis grubu, bölge grubu... Kritik bilgi dağınık mesajlar arasında kayboluyor. Aranmıyor, sisteme taşınmıyor, analiz edilemiyor."],
   ];
   return (
     <section className="bg-soft py-24">
       <div className="container-tight">
         <SectionIntro title={<>Sahada her gün kritik bilgi oluşuyor. Ama çoğu WhatsApp’ta kayboluyor.</>}>
-          Müşteri şikâyeti, arıza bildirimi, üretici ziyareti, stok problemi, kalite uyarısı, iade sorusu, fotoğraf, sesli mesaj ve servis formu genelde WhatsApp gruplarında, kişisel telefonlarda veya dağınık Excel dosyalarında kalır.
+          Müşteri şikâyeti, arıza bildirimi, stok problemi, kalite uyarısı, fotoğraf ve sesli mesaj — büyük çoğunluğu WhatsApp gruplarında ya da kişisel telefonlarda kalır. Sisteme girmez, aranmaz, analiz edilemez.
         </SectionIntro>
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {problems.map(([Icon, title, desc], i) => (
@@ -417,7 +418,7 @@ const Integrations = () => {
 };
 
 const Security = () => {
-  const items = ["KVKK uyumlu veri işleme", "GDPR uyumlu mimari", "Verileriniz AI eğitiminde kullanılmaz", "Rol bazlı erişim", "Şube, bölge ve merkez yetkilendirmesi", "Güvenli veri iletimi", "Veri şifreleme", "Silme hakkı", "İşlem kayıtları", "Kurumsal veri işleme sözleşmesi"];
+  const items = ["KVKK uyumlu veri işleme", "GDPR uyumlu mimari", "Verileriniz AI eğitiminde kullanılmaz", "Rol bazlı erişim", "Şube, bölge ve merkez yetkilendirmesi", "Güvenli veri iletimi", "Veri şifreleme", "Silme hakkı", "İşlem kayıtları", "Kurumsal veri işleme sözleşmesi", "Veri işleme Türkiye ve AB altyapısında", "Asgari veri toplama prensibi"];
   return (
     <section className="border-t border-border bg-soft py-24">
       <div className="container-tight">
@@ -466,15 +467,15 @@ const ValueAndDifference = () => (
 const Pricing = () => {
   const plans = [
     ["Başlangıç", "Tek lokasyonlu işletmeler için.", "₺7.400", "/ lokasyon / ay + KDV", ["1 lokasyon", "Sınırsız personel", "WhatsApp AI asistanı", "Sınırsız doküman yükleme", "Aylık 800 konuşma", "Kaynaklı soru-cevap", "Temel saha notu kaydı", "Temel kullanım paneli", "Bulut depolama entegrasyonu", "E-posta destek"], "14 Gün Ücretsiz Başla", false],
-    ["Büyüme", "2–15 lokasyonlu ekipler için.", "₺6.400", "/ lokasyon / ay + KDV", ["Aylık 1.500 konuşma / lokasyon", "CRM / Google Sheets entegrasyonu", "Saha notlarını yapılandırılmış veriye çevirme", "Bilgi boşluğu analizi", "Trend raporu", "Rol bazlı erişim", "Şube / bölge / merkez görünümü", "Özel onboarding seansı", "WhatsApp destek"], "Demo Al", true],
-    ["Profesyonel", "16–50 lokasyonlu operasyonlar için.", "₺5.400", "/ lokasyon / ay + KDV", ["Aylık 2.000 konuşma / lokasyon", "Gelişmiş dashboard", "Görev / ticket oluşturma", "Tekrar eden problem analizi", "Özel raporlar", "Entegrasyon desteği", "Haftalık başarı görüşmesi", "Öncelikli destek"], "Satış Ekibiyle Görüş", false],
+    ["Büyüme", "2–15 lokasyonlu ekipler için.", "₺6.400", "/ lokasyon / ay + KDV", ["Başlangıç planının tüm özellikleri dahil", "Aylık 1.500 konuşma / lokasyon", "CRM / Google Sheets entegrasyonu", "Saha notlarını yapılandırılmış veriye çevirme", "Bilgi boşluğu analizi", "Trend raporu", "Rol bazlı erişim", "Şube / bölge / merkez görünümü", "Özel onboarding seansı", "WhatsApp destek"], "Demo Al", true],
+    ["Profesyonel", "16–50 lokasyonlu operasyonlar için.", "₺5.400", "/ lokasyon / ay + KDV", ["Büyüme planının tüm özellikleri dahil", "Aylık 2.000 konuşma / lokasyon", "Gelişmiş dashboard", "Görev / ticket oluşturma", "Tekrar eden problem analizi", "Özel raporlar", "Entegrasyon desteği", "Haftalık başarı görüşmesi", "Öncelikli destek"], "Satış Ekibiyle Görüş", false],
     ["Kurumsal", "50+ lokasyon ve özel ihtiyaçlar için.", "Teklif", "üzerine", ["Sınırsız lokasyon ve konuşma seçenekleri", "Özel entegrasyonlar", "API / webhook erişimi", "Özel güvenlik süreçleri", "White-label seçeneği", "SLA", "Müşteri başarı yöneticisi", "Gelişmiş yetkilendirme", "Kurumsal veri işleme sözleşmesi"], "Kurumsal Demo Al", false],
   ];
   return (
     <section id="fiyatlandirma" className="bg-soft py-24">
       <div className="container-tight">
         <SectionIntro eyebrow="Fiyatlandırma" title={<>Şube sayınıza göre sade fiyatlandırma.</>}>
-          Personel sınırı yok. Gizli ücret yok. İstediğiniz zaman iptal.
+          Personel sınırı yok. Gizli ücret yok. Aylık fatura, önceden taahhüt yok.
         </SectionIntro>
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {plans.map(([name, tag, price, unit, features, cta, highlight], i) => (
@@ -491,9 +492,9 @@ const Pricing = () => {
           ))}
         </div>
         <div className="mt-10 grid gap-5 rounded-2xl border border-border bg-card p-7 text-sm md:grid-cols-3">
-          <div><p className="font-medium">Yıllık ödeme</p><p className="mt-1 text-muted-foreground">%15 indirim</p></div>
-          <div><p className="font-medium">Aylık konuşma aşımı</p><p className="mt-1 text-muted-foreground">Konuşma başına ₺4.50</p></div>
-          <div><p className="font-medium">Konuşma nedir?</p><p className="mt-1 text-muted-foreground">Bir çalışanın bir oturumda sorduğu soru veya yaptığı bildirim ve aldığı cevap = 1 konuşma.</p></div>
+          <div><p className="font-medium">Yıllık ödeme</p><p className="mt-1 text-muted-foreground">%15 indirim — Başlangıç, Büyüme ve Profesyonel planlarına uygulanır.</p></div>
+          <div><p className="font-medium">Aylık konuşma aşımı</p><p className="mt-1 text-muted-foreground">Tüm planlarda konuşma başına ₺4,50.</p></div>
+          <div><p className="font-medium">Konuşma nedir?</p><p className="mt-1 text-muted-foreground">Bir çalışanın bir oturumda yaptığı tek bir soru veya bildirim ve aldığı yanıt = 1 konuşma. 14 gün ücretsiz deneme yalnızca Başlangıç planı için geçerlidir.</p></div>
         </div>
       </div>
     </section>
@@ -512,7 +513,9 @@ const FAQ = () => {
     ["Hangi sektörlerde kullanılır?", "Otel, perakende, restoran, teknik servis, tarım-gıda, lojistik, depo, tesis yönetimi, güvenlik, temizlik ve saha satış ekiplerinde kullanılabilir."],
     ["Verilerimiz AI eğitiminde kullanılır mı?", "Hayır. Şirket dokümanlarınız, mesajlarınız ve operasyon verileriniz model eğitimi için kullanılmaz."],
     ["Mevcut dokümanlarımız dağınık. Önce düzenlememiz gerekir mi?", "Hayır. PDF, Word, Excel, Google Drive veya SharePoint üzerindeki mevcut dokümanlarınızla başlanabilir."],
-    ["Kurulum ne kadar sürer?", "Temel kurulum aynı gün içinde yapılabilir. Entegrasyon ihtiyacı varsa süre kullanılan sistemlere göre değişir."],
+    ["WhatsApp Business API nedir, ayrıca hesap açmam gerekiyor mu?", "saha.team kurumsal WhatsApp üzerinden çalıştığı için WhatsApp Business API bağlantısı gereklidir. Bu tek seferlik bir kurulum adımıdır ve Meta'nın onay sürecini (1–3 iş günü) birlikte yürütüyoruz. Mevcut bir iş telefonu numaranız varsa aynı numarayı kullanabilirsiniz."],
+    ["Aylık ve yıllık plan farkı nedir, taahhüt var mı?", "Tüm planlar aylık faturalandırılır, herhangi bir taahhüt yoktur. Yıllık ödemeyi tercih ederseniz Başlangıç, Büyüme ve Profesyonel planlarında %15 indirim uygulanır."],
+    ["Kurulum ne kadar sürer?", "WhatsApp Business API bağlantısı, Meta'nın onay sürecini gerektirdiğinden 1–3 iş günü sürer. Bu süreci sizinle birlikte yürütüyor, gerekli adımlarda rehberlik ediyoruz. API bağlantısı tamamlandıktan sonra asistan kurulumu genellikle aynı gün içinde yapılabilir."],
     ["Hangi dilleri destekler?", "saha.team çok dilli ekiplerde kullanılabilir. Personel kendi dilinde soru sorabilir ve kendi dilinde yanıt alabilir."],
   ];
   return (
@@ -538,10 +541,10 @@ const FinalCTA = () => (
       <div className="rounded-3xl border border-border bg-primary p-10 text-center text-primary-foreground shadow-glow md:p-16">
         <h2 className="font-serif text-4xl md:text-5xl">Sahadaki bilgi artık WhatsApp’ta kaybolmasın.</h2>
         <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/80">
-          saha.team ile ekibiniz WhatsApp’tan sorar, bildirir, fotoğraf ve sesli not gönderir. Sistem doğru cevabı verir, gelen bilgiyi dataya çevirir, CRM’e işler ve şirketiniz için kalıcı saha hafızası oluşturur.
+          Ekibiniz zaten WhatsApp'ta. saha.team ile o mesajlar artık kaybolmuyor — doğru cevabı alıyor, kayda dönüşüyor ve şirketinizin hafızasına ekleniyor.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <Button asChild size="lg" variant="secondary" className="rounded-full"><a href="#iletisim">WhatsApp’tan Dene <ArrowRight className="h-4 w-4" /></a></Button>
+          <Button asChild size="lg" variant="secondary" className="rounded-full"><a href="https://wa.me/905555555555?text=Merhaba%2C%20saha.team%27i%20denemek%20istiyorum.">WhatsApp'tan Dene <ArrowRight className="h-4 w-4" /></a></Button>
           <Button asChild size="lg" variant="outline" className="rounded-full border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary"><a href="#iletisim">15 Dakikalık Demo Al</a></Button>
         </div>
       </div>
@@ -588,7 +591,7 @@ const Footer = () => (
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground"><span className="font-serif text-lg leading-none">s</span></div>
           <span className="text-base font-medium">saha.team</span>
         </div>
-        <p className="mt-4 max-w-md text-sm text-muted-foreground">Saha ekipleri için WhatsApp tabanlı AI yardımcısı.</p>
+        <p className="mt-4 max-w-md text-sm text-muted-foreground">Masabaşı olmayan ekipler için WhatsApp tabanlı operasyon hafızası.</p>
         <p className="mt-4 text-xs text-muted-foreground">WhatsApp: +90 555 555 55 55<br />Telefon: +90 212 555 00 00<br />merhaba@saha.team<br />Maslak No.1 Plaza, Kat 15 — Sarıyer / İstanbul</p>
       </div>
       <div>
