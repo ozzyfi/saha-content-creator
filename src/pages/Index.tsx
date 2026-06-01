@@ -541,10 +541,10 @@ const FinalCTA = () => (
       <div className="rounded-3xl border border-border bg-primary p-10 text-center text-primary-foreground shadow-glow md:p-16">
         <h2 className="font-serif text-4xl md:text-5xl">Sahadaki bilgi artık WhatsApp’ta kaybolmasın.</h2>
         <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/80">
-          saha.team ile ekibiniz WhatsApp’tan sorar, bildirir, fotoğraf ve sesli not gönderir. Sistem doğru cevabı verir, gelen bilgiyi dataya çevirir, CRM’e işler ve şirketiniz için kalıcı saha hafızası oluşturur.
+          Ekibiniz zaten WhatsApp'ta. saha.team ile o mesajlar artık kaybolmuyor — doğru cevabı alıyor, kayda dönüşüyor ve şirketinizin hafızasına ekleniyor.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <Button asChild size="lg" variant="secondary" className="rounded-full"><a href="#iletisim">WhatsApp’tan Dene <ArrowRight className="h-4 w-4" /></a></Button>
+          <Button asChild size="lg" variant="secondary" className="rounded-full"><a href="https://wa.me/905555555555?text=Merhaba%2C%20saha.team%27i%20denemek%20istiyorum.">WhatsApp'tan Dene <ArrowRight className="h-4 w-4" /></a></Button>
           <Button asChild size="lg" variant="outline" className="rounded-full border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary"><a href="#iletisim">15 Dakikalık Demo Al</a></Button>
         </div>
       </div>
