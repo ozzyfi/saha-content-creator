@@ -460,24 +460,22 @@ const ValueAndDifference = () => (
 
 const Pricing = () => {
   const plans = [
-    ["Başlangıç", "Tek lokasyonlu işletmeler için.", "₺7.400", "/ lokasyon / ay + KDV", ["1 lokasyon", "Sınırsız personel", "WhatsApp AI asistanı", "Sınırsız doküman yükleme", "Aylık 800 konuşma", "Kaynaklı soru-cevap", "Temel saha notu kaydı", "Temel kullanım paneli", "Bulut depolama entegrasyonu", "E-posta destek"], "14 Gün Ücretsiz Başla", false],
-    ["Büyüme", "2–15 lokasyonlu ekipler için.", "₺6.400", "/ lokasyon / ay + KDV", ["Başlangıç planının tüm özellikleri dahil", "Aylık 1.500 konuşma / lokasyon", "CRM / Google Sheets entegrasyonu", "Saha notlarını yapılandırılmış veriye çevirme", "Bilgi boşluğu analizi", "Trend raporu", "Rol bazlı erişim", "Şube / bölge / merkez görünümü", "Özel onboarding seansı", "WhatsApp destek"], "Demo Al", true],
-    ["Profesyonel", "16–50 lokasyonlu operasyonlar için.", "₺5.400", "/ lokasyon / ay + KDV", ["Büyüme planının tüm özellikleri dahil", "Aylık 2.000 konuşma / lokasyon", "Gelişmiş dashboard", "Görev / ticket oluşturma", "Tekrar eden problem analizi", "Özel raporlar", "Entegrasyon desteği", "Haftalık başarı görüşmesi", "Öncelikli destek"], "Satış Ekibiyle Görüş", false],
-    ["Kurumsal", "50+ lokasyon ve özel ihtiyaçlar için.", "Teklif", "üzerine", ["Sınırsız lokasyon ve konuşma seçenekleri", "Özel entegrasyonlar", "API / webhook erişimi", "Özel güvenlik süreçleri", "White-label seçeneği", "SLA", "Müşteri başarı yöneticisi", "Gelişmiş yetkilendirme", "Kurumsal veri işleme sözleşmesi"], "Kurumsal Demo Al", false],
+    ["Başlangıç", "Tek lokasyonlu ekipler veya ilk pilot kullanım için.", ["WhatsApp AI asistanı", "Şirket dokümanlarından kaynaklı cevap", "Fotoğraf, sesli not ve bildirim alma", "Temel kullanım paneli", "Hızlı kurulum"], "Pilot Başlat", false],
+    ["Büyüme", "2–15 lokasyonlu operasyonlar için.", ["Başlangıç kapsamının tamamı", "CRM / Google Sheets entegrasyonu", "Saha notlarını yapılandırılmış veriye çevirme", "Bilgi boşluğu analizi", "Şube / bölge / merkez görünümü", "Onboarding desteği"], "Fiyat Teklifi Al", true],
+    ["Kurumsal", "Çok lokasyonlu ve özel entegrasyon ihtiyacı olan şirketler için.", ["Özel CRM / ERP / ticket entegrasyonları", "API / webhook erişimi", "Gelişmiş yetkilendirme", "SLA ve güvenlik süreçleri", "KVKK uyumlu veri işleme sözleşmesi", "Müşteri başarı desteği"], "Kurumsal Demo Al", false],
   ];
   return (
     <section id="fiyatlandirma" className="bg-soft py-24">
       <div className="container-tight">
-        <SectionIntro eyebrow="Fiyatlandırma" title={<>Şube sayınıza göre sade fiyatlandırma.</>}>
-          Personel sınırı yok. Gizli ücret yok. Aylık fatura, önceden taahhüt yok.
+        <SectionIntro eyebrow="Fiyatlandırma" title={<>Operasyonunuza göre sade fiyatlandırma.</>}>
+          saha.team; lokasyon sayısı, aylık WhatsApp kullanım hacmi, doküman sayısı, entegrasyon ihtiyacı ve güvenlik gereksinimlerine göre fiyatlandırılır. Personel sayısını değil, operasyon yapınızı esas alırız.
         </SectionIntro>
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          {plans.map(([name, tag, price, unit, features, cta, highlight], i) => (
+        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {plans.map(([name, tag, features, cta, highlight], i) => (
             <motion.div key={name as string} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.05 }} className={`relative flex flex-col rounded-2xl border p-7 ${highlight ? "border-primary bg-card shadow-glow" : "border-border bg-card"}`}>
               {highlight && <span className="absolute -top-3 left-7 rounded-full bg-primary px-3 py-1 text-[11px] font-medium text-primary-foreground">En popüler</span>}
               <p className="font-serif text-2xl">{name as string}</p>
               <p className="mt-1 text-xs text-muted-foreground">{tag as string}</p>
-              <div className="mt-5 flex items-baseline gap-1"><span className="font-serif text-4xl">{price as string}</span><span className="text-xs text-muted-foreground">{unit as string}</span></div>
               <ul className="mt-5 flex-1 space-y-2 text-sm">
                 {(features as string[]).map((feature) => <li key={feature} className="flex gap-2"><Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" /><span className="text-muted-foreground">{feature}</span></li>)}
               </ul>
@@ -485,11 +483,9 @@ const Pricing = () => {
             </motion.div>
           ))}
         </div>
-        <div className="mt-10 grid gap-5 rounded-2xl border border-border bg-card p-7 text-sm md:grid-cols-3">
-          <div><p className="font-medium">Yıllık ödeme</p><p className="mt-1 text-muted-foreground">%15 indirim — Başlangıç, Büyüme ve Profesyonel planlarına uygulanır.</p></div>
-          <div><p className="font-medium">Aylık konuşma aşımı</p><p className="mt-1 text-muted-foreground">Tüm planlarda konuşma başına ₺4,50.</p></div>
-          <div><p className="font-medium">Konuşma nedir?</p><p className="mt-1 text-muted-foreground">Bir çalışanın bir oturumda yaptığı tek bir soru veya bildirim ve aldığı yanıt = 1 konuşma. 14 gün ücretsiz deneme yalnızca Başlangıç planı için geçerlidir.</p></div>
-        </div>
+        <p className="mt-10 text-center text-sm text-muted-foreground">
+          Lokasyon başına aylık fiyatlandırma. İlk görüşmede operasyon yapınıza göre teklif hazırlıyoruz.
+        </p>
       </div>
     </section>
   );
