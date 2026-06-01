@@ -574,6 +574,34 @@ const Contact = () => {
             <div><label className="text-xs text-muted-foreground">Ad Soyad</label><Input required placeholder="Ayşe Yılmaz" className="mt-1" /></div>
             <div><label className="text-xs text-muted-foreground">E-posta</label><Input required type="email" placeholder="ayse@sirket.com" className="mt-1" /></div>
             <div><label className="text-xs text-muted-foreground">Şirket</label><Input placeholder="Örn. Lara Resort" className="mt-1" /></div>
+            <div>
+              <label className="text-xs text-muted-foreground">Kaç lokasyonunuz var?</label>
+              <Select>
+                <SelectTrigger className="mt-1"><SelectValue placeholder="Seçin" /></SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="1">1 lokasyon</SelectItem>
+                  <SelectItem value="2-5">2–5 lokasyon</SelectItem>
+                  <SelectItem value="6-15">6–15 lokasyon</SelectItem>
+                  <SelectItem value="16-50">16–50 lokasyon</SelectItem>
+                  <SelectItem value="50+">50+ lokasyon</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <div>
+              <label className="text-xs text-muted-foreground">Sektörünüz</label>
+              <Select>
+                <SelectTrigger className="mt-1"><SelectValue placeholder="Seçin" /></SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="otel">Otel / Konaklama</SelectItem>
+                  <SelectItem value="perakende">Perakende / Mağaza</SelectItem>
+                  <SelectItem value="teknik-servis">Teknik Servis / Bakım</SelectItem>
+                  <SelectItem value="tarim">Tarım / Gıda</SelectItem>
+                  <SelectItem value="lojistik">Lojistik / Kargo</SelectItem>
+                  <SelectItem value="restoran">Restoran / F&B</SelectItem>
+                  <SelectItem value="diger">Diğer</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
             <div><label className="text-xs text-muted-foreground">Mesaj</label><Textarea rows={4} placeholder="Kaç lokasyonunuz var, hangi sistemleri kullanıyorsunuz?" className="mt-1" /></div>
             <Button type="submit" size="lg" className="w-full rounded-full">{sent ? "Teşekkürler ✓ En kısa sürede döneceğiz" : "Demo Talep Et"}</Button>
             <p className="text-[11px] text-muted-foreground">Form bilgileriniz KVKK kapsamında işlenir, üçüncü taraflarla paylaşılmaz.</p>
