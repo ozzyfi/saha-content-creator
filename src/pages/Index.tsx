@@ -60,7 +60,7 @@ const Nav = () => (
   <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
     <div className="container-tight flex h-16 items-center justify-between gap-4">
       <a href="#top" className="flex items-center gap-2">
-        <img src="/logo-full.png" alt="saha.team" className="h-8 w-auto" />
+        <img src="/logo-full.png" alt="saha.team" className="h-9 w-auto" />
       </a>
       <nav className="hidden items-center gap-5 text-sm text-muted-foreground lg:flex">
         {menuItems.map(([label, href]) => (
@@ -612,7 +612,7 @@ const Footer = () => (
     <div className="container-tight grid gap-10 md:grid-cols-4">
       <div className="md:col-span-2">
         <div>
-          <img src="/logo-full.png" alt="saha.team" className="h-8 w-auto" />
+          <img src="/logo-full.png" alt="saha.team" className="h-9 w-auto" />
         </div>
         <p className="mt-4 max-w-md text-sm text-muted-foreground">Masabaşı olmayan ekipler için WhatsApp tabanlı operasyon hafızası.</p>
         <p className="mt-4 text-xs text-muted-foreground">hi@toola.net<br />Teknopark İstanbul, Pendik / İstanbul</p>
