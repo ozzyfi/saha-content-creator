@@ -170,10 +170,10 @@ const Hero = () => (
 
 const Metrics = () => {
   const metrics = [
-    ["80+ saat / ay", "Müdürlerin tekrar eden sorulara ayırdığı zamanı azaltın."],
-    ["%99 kaynaklı cevap", "Yanıtlar sadece sizin dokümanlarınıza ve bağlı sistemlerinize dayanır."],
-    ["15 dakikada kurulum", "Dokümanlarınızı yükleyin, WhatsApp numarasını paylaşın, kullanmaya başlayın."],
-    ["CRM’e otomatik kayıt", "Sahadan gelen notlar, fotoğraflar ve bildirimler ilgili kayda işlenir."],
+    ["Aylık 80+ saat", "Müdürün tekrar eden prosedür sorularından kurtarılan zamanı — ekip ve sektöre göre değişir."],
+    ["%100 kaynaklı yanıt", "Cevaplar yalnızca sizin dokümanlarınızdan gelir. Uydurma yok, genel bilgi yok."],
+    ["Aynı gün aktif", "Dokümanlarınızı yükleyin, WhatsApp numaranızı ekleyin; asistan kullanıma hazır."],
+    ["CRM'e otomatik kayıt", "Sahadan gelen not, fotoğraf ve bildirim ilgili kayda otomatik işlenir."],
   ];
   return (
     <section className="border-y border-border bg-card/60">
