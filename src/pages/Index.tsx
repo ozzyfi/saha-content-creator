@@ -218,7 +218,7 @@ const Problem = () => {
 const Solution = () => (
   <section className="border-t border-border py-24">
     <div className="container-tight grid gap-12 md:grid-cols-2 md:items-center">
-      <SectionIntro eyebrow="Çözüm" title={<>saha.team, WhatsApp konuşmalarını şirket hafızasına dönüştürür.</>}>
+      <SectionIntro title={<>saha.team, WhatsApp konuşmalarını şirket hafızasına dönüştürür.</>}>
         saha.team sadece soru-cevap veren bir bot değildir. Mesajı, sesli notu, fotoğrafı veya dokümanı anlar; gerektiğinde doğru cevabı verir, kayıt oluşturur, CRM’e işler ve yöneticiyi uyarır.
       </SectionIntro>
       <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.1 }} className="rounded-2xl border border-border bg-card p-6 shadow-soft">
@@ -252,12 +252,12 @@ const HowItWorks = () => {
   return (
     <section id="nasil" className="bg-soft py-24">
       <div className="container-tight">
-        <SectionIntro eyebrow="Nasıl çalışır?" title={<>WhatsApp mesajı, birkaç saniye içinde aksiyona dönüşür.</>} />
+        <SectionIntro title={<>WhatsApp mesajı, birkaç saniye içinde aksiyona dönüşür.</>} />
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {steps.map(([Icon, title, desc], i) => (
             <motion.div key={title as string} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.05 }} className="rounded-2xl border border-border bg-card p-7">
               <div className="flex items-center justify-between">
-                <span className="font-serif text-5xl text-primary/40">{i + 1}</span>
+                <span className="font-serif text-5xl text-primary/70">{i + 1}</span>
                 <Icon className="h-6 w-6 text-primary" />
               </div>
               <h3 className="mt-4 font-serif text-2xl">{title as string}</h3>
@@ -284,7 +284,7 @@ const ProductModules = () => {
   return (
     <section id="ozellikler" className="py-24">
       <div className="container-tight">
-        <SectionIntro eyebrow="Ürün modülleri" title={<>Chatbot değil, sahadan gelen bilgiyi işleyen operasyon katmanı.</>}>
+        <SectionIntro title={<>Chatbot değil, sahadan gelen bilgiyi işleyen operasyon katmanı.</>}>
           saha.team, WhatsApp’taki konuşmayı şirketinizin sistemlerine ve hafızasına bağlayan modüllerle çalışır.
         </SectionIntro>
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -313,7 +313,7 @@ const Sectors = () => {
   return (
     <section id="sektorler" className="bg-soft py-24">
       <div className="container-tight">
-        <SectionIntro eyebrow="Sektörler" title={<>Masabaşı olmayan her ekip için saha hafızası.</>}>
+        <SectionIntro title={<>Masabaşı olmayan her ekip için saha hafızası.</>}>
           Otel, perakende, servis, tarım, lojistik ve restoran operasyonlarında bilgi WhatsApp’tan doğar; saha.team onu kayda dönüştürür.
         </SectionIntro>
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -333,7 +333,7 @@ const Sectors = () => {
 const WhyWhatsApp = () => (
   <section className="py-24">
     <div className="container-tight grid gap-12 md:grid-cols-2 md:items-center">
-      <SectionIntro eyebrow="Neden WhatsApp?" title={<>Çünkü saha ekipleri zaten orada.</>}>
+      <SectionIntro title={<>Çünkü saha ekipleri zaten orada.</>}>
         Yeni uygulama indirtmek, hesap açtırmak ve eğitim vermek kullanımı düşürür. saha.team ile QR kod okutulur, WhatsApp açılır, çalışan mesajını gönderir ve cevabını alır.
       </SectionIntro>
       <motion.div {...fadeUp} className="grid gap-4">
@@ -356,7 +356,7 @@ const WhyWhatsApp = () => (
 const Dashboard = () => (
   <section className="bg-soft py-24">
     <div className="container-tight grid gap-12 md:grid-cols-2 md:items-center">
-      <SectionIntro eyebrow="Yönetici paneli" title={<>Kullanım sahada, kontrol merkezde.</>}>
+      <SectionIntro title={<>Kullanım sahada, kontrol merkezde.</>}>
         saha.team paneli; yanıtlanan soruları, CRM’e işlenen notları, açılan görevleri, tekrar eden problemleri, eksik dokümanları ve kurtarılan yönetici zamanını görünür hale getirir.
       </SectionIntro>
       <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.1 }} className="rounded-2xl border border-border bg-card p-5 shadow-soft">
@@ -393,7 +393,7 @@ const Integrations = () => {
   return (
     <section id="entegrasyonlar" className="py-24">
       <div className="container-tight">
-        <SectionIntro eyebrow="Entegrasyonlar" title={<>Mevcut sistemlerinizle çalışır.</>}>
+        <SectionIntro title={<>Mevcut sistemlerinizle çalışır.</>}>
           saha.team yeni bir karmaşa yaratmaz. Kullandığınız sistemlerin üzerine akıllı bir saha katmanı olarak oturur.
         </SectionIntro>
         <div className="mt-12 grid gap-5 lg:grid-cols-3">
@@ -416,7 +416,7 @@ const Security = () => {
   return (
     <section className="border-t border-border bg-soft py-24">
       <div className="container-tight">
-        <SectionIntro eyebrow="Güvenlik" title={<>Verileriniz sizin kontrolünüzde kalır.</>}>
+        <SectionIntro title={<>Verileriniz sizin kontrolünüzde kalır.</>}>
           Dokümanlarınız, mesajlarınız ve saha verileriniz sadece sizin asistanınızı çalıştırmak için kullanılır.
         </SectionIntro>
         <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
@@ -435,7 +435,7 @@ const Security = () => {
 const ValueAndDifference = () => (
   <section className="py-24">
     <div className="container-tight grid gap-12 lg:grid-cols-2">
-      <SectionIntro eyebrow="Değer" title={<>Müdürünüz cevap vermek yerine operasyon yönetsin.</>}>
+      <SectionIntro title={<>Müdürünüz cevap vermek yerine operasyon yönetsin.</>}>
         saha.team ile müdürler daha az bölünür, personel doğru cevabı hızlı alır, saha notları otomatik kayda dönüşür, CRM güncel kalır ve tekrar eden problemler erken görünür.
       </SectionIntro>
       <motion.div {...fadeUp} className="rounded-2xl border border-border bg-card p-7 shadow-soft">
@@ -467,7 +467,7 @@ const Pricing = () => {
   return (
     <section id="fiyatlandirma" className="bg-soft py-24">
       <div className="container-tight">
-        <SectionIntro eyebrow="Fiyatlandırma" title={<>Operasyonunuza göre sade fiyatlandırma.</>}>
+        <SectionIntro title={<>Operasyonunuza göre sade fiyatlandırma.</>}>
           saha.team; lokasyon sayısı, aylık WhatsApp kullanım hacmi, doküman sayısı, entegrasyon ihtiyacı ve güvenlik gereksinimlerine göre fiyatlandırılır. Personel sayısını değil, operasyon yapınızı esas alırız.
         </SectionIntro>
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -511,7 +511,7 @@ const FAQ = () => {
   return (
     <section id="sss" className="py-24">
       <div className="container-tight max-w-3xl">
-        <SectionIntro eyebrow="SSS" title={<>Aklınızdaki soruların cevapları burada.</>} />
+        <SectionIntro title={<>Aklınızdaki soruların cevapları burada.</>} />
         <Accordion type="single" collapsible className="mt-10 space-y-2">
           {faqs.map(([q, a], i) => (
             <AccordionItem key={q} value={`item-${i}`} className="rounded-2xl border border-border bg-card px-5">
@@ -548,11 +548,11 @@ const Contact = () => {
     <section id="iletisim" className="bg-soft py-24">
       <div className="container-tight grid gap-10 md:grid-cols-2">
         <motion.div {...fadeUp}>
-          <SectionIntro eyebrow="İletişim" title={<>Demo planlayalım.</>}>
+          <SectionIntro title={<>Demo planlayalım.</>}>
             Saha ekibinizin WhatsApp akışını, dokümanlarınızı ve mevcut sistemlerinizi 15 dakikada birlikte değerlendirelim.
           </SectionIntro>
           <div className="mt-8 space-y-4 text-sm">
-            <div className="flex items-center gap-3"><Mail className="h-4 w-4 text-primary" /> <span>E-posta: hi@toola.net</span></div>
+            <div className="flex items-center gap-3"><Mail className="h-4 w-4 text-primary" /> <span>hi@saha.team</span></div>
             <div className="flex items-center gap-3"><MapPin className="h-4 w-4 text-primary" /> <span>Teknopark İstanbul, Pendik / İstanbul</span></div>
           </div>
         </motion.div>
@@ -607,7 +607,7 @@ const Footer = () => (
           <img src="/logo-full.png" alt="saha.team" className="h-9 w-auto" />
         </div>
         <p className="mt-4 max-w-md text-sm text-muted-foreground">Masabaşı olmayan ekipler için WhatsApp tabanlı operasyon hafızası.</p>
-        <p className="mt-4 text-xs text-muted-foreground">hi@toola.net<br />Teknopark İstanbul, Pendik / İstanbul</p>
+        <p className="mt-4 text-xs text-muted-foreground">hi@saha.team<br />Teknopark İstanbul, Pendik / İstanbul</p>
       </div>
       <div>
         <p className="text-sm font-medium">Menü</p>
