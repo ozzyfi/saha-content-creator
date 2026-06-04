@@ -537,14 +537,17 @@ const FAQ = () => {
 const FinalCTA = () => (
   <section className="py-24">
     <div className="container-tight">
-      <div className="rounded-3xl border border-border bg-primary p-10 text-center text-primary-foreground shadow-glow md:p-16">
-        <h2 className="font-serif text-4xl md:text-5xl">Sahadaki bilgi artık WhatsApp’ta kaybolmasın.</h2>
-        <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/80">
-          Ekibiniz zaten WhatsApp'ta. saha.team ile o mesajlar artık kaybolmuyor — doğru cevabı alıyor, kayda dönüşüyor ve şirketinizin hafızasına ekleniyor.
-        </p>
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <Button asChild size="lg" variant="secondary" className="rounded-full"><a href="https://wa.me/358415773392?text=Merhaba%2C%20saha.team%27i%20denemek%20istiyorum.">WhatsApp'tan Dene <ArrowRight className="h-4 w-4" /></a></Button>
-          <Button asChild size="lg" variant="outline" className="rounded-full border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary"><a href="#iletisim">15 Dakikalık Demo Al</a></Button>
+      <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-dark p-10 text-center shadow-glow md:p-16">
+        <div className="pointer-events-none absolute inset-x-0 -top-24 mx-auto h-64 w-2/3 rounded-full bg-primary/30 blur-3xl" />
+        <div className="relative">
+          <h2 className="font-serif text-4xl text-white md:text-5xl">Sahadaki bilgi artık WhatsApp’ta kaybolmasın.</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-white/55">
+            Ekibiniz zaten WhatsApp'ta. saha.team ile o mesajlar artık kaybolmuyor — doğru cevabı alıyor, kayda dönüşüyor ve şirketinizin hafızasına ekleniyor.
+          </p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <Button asChild size="lg" variant="default" className="rounded-full shadow-glow"><a href="https://wa.me/358415773392?text=Merhaba%2C%20saha.team%27i%20denemek%20istiyorum.">WhatsApp'tan Dene <ArrowRight className="h-4 w-4" /></a></Button>
+            <Button asChild size="lg" variant="outline" className="rounded-full border-white/20 bg-transparent text-white hover:bg-white hover:text-foreground"><a href="#iletisim">15 Dakikalık Demo Al</a></Button>
+          </div>
         </div>
       </div>
     </div>
