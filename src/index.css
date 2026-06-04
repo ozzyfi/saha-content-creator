@@ -4,43 +4,41 @@
 
 @layer base {
   :root {
-    /* Light, modern, calm */
-    --background: 40 30% 98%;
-    --foreground: 160 18% 6%;
+    --background: 0 0% 99%;
+    --foreground: 220 20% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 160 12% 12%;
+    --card-foreground: 220 15% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 160 12% 12%;
+    --popover-foreground: 220 15% 12%;
 
-    /* WhatsApp inspired green, refined */
-    --primary: 152 55% 38%;
+    --primary: 152 58% 34%;
     --primary-foreground: 0 0% 100%;
-    --primary-soft: 152 50% 95%;
+    --primary-soft: 152 50% 94%;
 
-    --secondary: 40 20% 95%;
-    --secondary-foreground: 160 12% 18%;
+    --secondary: 220 14% 95%;
+    --secondary-foreground: 220 12% 18%;
 
-    --muted: 40 15% 94%;
-    --muted-foreground: 160 14% 26%;
+    --muted: 220 12% 93%;
+    --muted-foreground: 220 10% 42%;
 
     --accent: 152 40% 92%;
-    --accent-foreground: 152 55% 25%;
+    --accent-foreground: 152 58% 24%;
 
     --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 160 10% 90%;
-    --input: 160 10% 90%;
-    --ring: 152 55% 38%;
+    --border: 220 12% 88%;
+    --input: 220 12% 88%;
+    --ring: 152 58% 34%;
 
-    --radius: 1rem;
+    --radius: 0.875rem;
 
-    --gradient-hero: radial-gradient(ellipse at top, hsl(152 50% 95%) 0%, hsl(40 30% 98%) 60%);
-    --gradient-soft: linear-gradient(180deg, hsl(40 30% 99%) 0%, hsl(40 25% 96%) 100%);
-    --shadow-soft: 0 1px 2px hsl(160 12% 12% / 0.04), 0 8px 30px hsl(160 12% 12% / 0.06);
-    --shadow-glow: 0 20px 60px -20px hsl(152 55% 38% / 0.25);
+    --gradient-hero: linear-gradient(155deg, hsl(220 22% 7%) 0%, hsl(220 18% 11%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(220 14% 98%) 0%, hsl(220 12% 96%) 100%);
+    --shadow-soft: 0 1px 3px hsl(220 20% 8% / 0.06), 0 8px 24px hsl(220 20% 8% / 0.08);
+    --shadow-glow: 0 20px 60px -20px hsl(152 58% 34% / 0.32);
   }
 }
 
@@ -70,4 +68,8 @@
   .shadow-soft { box-shadow: var(--shadow-soft); }
   .shadow-glow { box-shadow: var(--shadow-glow); }
   .container-tight { @apply mx-auto max-w-6xl px-6; }
+  .bg-dark { background: hsl(220 22% 7%); }
+  .text-light { color: hsl(0 0% 97%); }
+  .text-light-muted { color: hsl(0 0% 97% / 0.50); }
+  .border-light { border-color: hsl(0 0% 97% / 0.09); }
 }

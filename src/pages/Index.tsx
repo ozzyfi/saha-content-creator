@@ -53,7 +53,7 @@ const menuItems = [
 ];
 
 const Nav = () => (
-  <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
+  <header className="sticky top-0 z-50 border-b border-border/40 bg-background/95 backdrop-blur-md">
     <div className="container-tight flex h-16 items-center justify-between gap-4">
       <a href="#top" className="flex items-center gap-2">
         <img src="/logo-full.png" alt="saha.team" className="h-9 w-auto" />
@@ -77,16 +77,16 @@ const Nav = () => (
 
 const SectionIntro = ({ eyebrow, title, children }: { eyebrow?: string; title: React.ReactNode; children?: React.ReactNode }) => (
   <motion.div {...fadeUp} className="max-w-3xl">
-    {eyebrow && <p className="text-sm font-medium text-primary">{eyebrow}</p>}
-    <h2 className="mt-3 text-4xl leading-tight md:text-5xl">{title}</h2>
+    {eyebrow && <p className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary tracking-wide">{eyebrow}</p>}
+    <h2 className="mt-4 text-4xl leading-[1.08] md:text-5xl">{title}</h2>
     {children && <p className="mt-4 text-lg leading-relaxed text-muted-foreground">{children}</p>}
   </motion.div>
 );
 
 const ChatBubble = ({ from, name, text, source }: { from: "user" | "bot"; name?: string; text: string; source?: string }) => (
   <div className={`flex ${from === "user" ? "justify-end" : "justify-start"}`}>
-    <div className={`max-w-[86%] rounded-xl px-3 py-2 text-xs shadow-soft ${from === "user" ? "rounded-br-sm bg-primary-soft text-foreground" : "rounded-bl-sm bg-card text-foreground"}`}>
-      {name && <p className="mb-1 text-xs font-medium text-primary">{name}</p>}
+    <div className={`max-w-[86%] rounded-xl px-3 py-2 text-xs shadow-soft ${from === "user" ? "rounded-br-sm bg-white/10 text-white/90" : "rounded-bl-sm bg-card text-foreground"}`}>
+      {name && <p className={`mb-1 text-xs font-medium ${from === "user" ? "text-white/70" : "text-primary"}`}>{name}</p>}
       <p className="whitespace-pre-line leading-relaxed">{text}</p>
       {source && <p className="mt-2 text-[11px] text-muted-foreground">Kaynak: <span className="text-primary">{source}</span></p>}
     </div>
@@ -94,8 +94,8 @@ const ChatBubble = ({ from, name, text, source }: { from: "user" | "bot"; name?:
 );
 
 const FlowCard = () => (
-  <div className="mt-3 rounded-xl border border-border bg-card p-3 shadow-soft">
-    <p className="text-xs font-medium text-muted-foreground">Otomatik akış</p>
+  <div className="mt-3 rounded-xl border border-white/10 bg-white/6 p-3">
+    <p className="text-xs font-medium text-white/60">Otomatik akış</p>
     <div className="mt-2 grid grid-cols-2 gap-2 text-[11px]">
       {[
         [MessageCircle, "WhatsApp mesajı"],
@@ -103,7 +103,7 @@ const FlowCard = () => (
         [Database, "CRM kaydı"],
         [BarChart3, "Yönetici içgörüsü"],
       ].map(([Icon, label], index) => (
-        <div key={label as string} className="relative rounded-lg bg-secondary p-2">
+        <div key={label as string} className="relative rounded-lg bg-white/6 p-2 text-white/80">
           <Icon className="h-3.5 w-3.5 text-primary" />
           <p className="mt-1 font-medium leading-tight">{label as string}</p>
           {index < 3 && index !== 1 && <ArrowRight className="absolute -right-2 top-1/2 h-3 w-3 -translate-y-1/2 text-primary" />}
@@ -114,37 +114,41 @@ const FlowCard = () => (
 );
 
 const Hero = () => (
-  <section id="top" className="relative overflow-hidden bg-hero">
+  <section id="top" className="relative overflow-hidden bg-dark">
     <div className="container-tight grid items-center gap-10 py-14 md:grid-cols-[1.05fr_0.95fr] md:py-20">
       <motion.div {...fadeUp}>
-        <h1 className="text-5xl leading-[1.05] md:text-6xl">Saha ekibinizin WhatsApp’taki yardımcısı.</h1>
-        <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground md:text-xl">
+        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-white/70">
+          <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+          WhatsApp AI · Saha Hafızası
+        </div>
+        <h1 className="text-5xl leading-[1.02] text-white md:text-6xl lg:text-7xl">Saha ekibinizin WhatsApp’taki yardımcısı.</h1>
+        <p className="mt-5 max-w-xl text-lg leading-relaxed text-light-muted md:text-xl">
           Saha ekibiniz WhatsApp’tan yazar, konuşur, fotoğraf ya da doküman gönderir. saha.team doğru cevabı verir, gelen bilgiyi anlamlandırır, ilgili kayda işler ve şirketiniz için kalıcı saha hafızası oluşturur.
         </p>
-        <p className="mt-4 text-base font-medium text-foreground">Uygulama yok. Şifre yok. Eğitim yok.</p>
-        <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted-foreground">QR kodu okutun, WhatsApp'tan mesaj gönderin — başka bir adım yok.</p>
+        <p className="mt-5 text-base font-semibold text-primary">Uygulama yok. Şifre yok. Eğitim yok.</p>
+        <p className="mt-2 max-w-lg text-sm leading-relaxed text-light-muted">QR kodu okutun, WhatsApp'tan mesaj gönderin — başka bir adım yok.</p>
         <div className="mt-8 flex flex-wrap items-center gap-3">
           <Button asChild size="lg" className="rounded-full shadow-glow">
             <a href="https://wa.me/358415773392?text=Merhaba%2C%20saha.team%27i%20denemek%20istiyorum.">WhatsApp'tan Dene <ArrowRight className="h-4 w-4" /></a>
           </Button>
-          <Button asChild size="lg" variant="outline" className="rounded-full">
+          <Button asChild size="lg" variant="outline" className="rounded-full border-white/20 bg-transparent text-white hover:bg-white hover:text-foreground">
             <a href="#iletisim">15 Dakikalık Demo Al</a>
           </Button>
         </div>
-        <p className="mt-6 max-w-xl text-sm font-medium leading-relaxed text-foreground">
+        <p className="mt-6 max-w-xl text-sm font-medium leading-relaxed text-white/70">
           Soru cevaplar · Bildirimi kayıt eder · CRM'e işler · Kör noktaları gösterir
         </p>
       </motion.div>
 
       <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.1 }}>
-        <div className="relative mx-auto max-w-lg rounded-3xl border border-border bg-card p-2 shadow-soft">
-          <div className="rounded-[1.25rem] bg-soft p-3">
-            <div className="mb-3 flex items-center gap-2 border-b border-border/60 pb-2">
+        <div className="relative mx-auto max-w-lg rounded-3xl border border-white/10 bg-white/5 p-2 shadow-soft backdrop-blur-sm">
+          <div className="rounded-[1.25rem] bg-white/4 p-3">
+            <div className="mb-3 flex items-center gap-2 border-b border-white/10 pb-2">
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
                 <MessageCircle className="h-4 w-4" />
               </div>
               <div>
-                <p className="text-xs font-medium">saha.team Asistan</p>
+                <p className="text-xs font-medium text-white/80">saha.team Asistan</p>
                 <p className="text-[11px] text-primary">çevrimiçi</p>
               </div>
             </div>
@@ -170,13 +174,14 @@ const Metrics = () => {
     ["CRM'e otomatik kayıt", "Sahadan gelen not, fotoğraf ve bildirim ilgili kayda otomatik işlenir."],
   ];
   return (
-    <section className="border-y border-border bg-card/60">
-      <div className="container-tight py-10">
-        <p className="text-xl font-medium">Sahadaki bilgi artık kaybolmaz.</p>
-        <div className="mt-6 grid gap-5 md:grid-cols-4">
+    <section className="border-y border-border py-14">
+      <div className="container-tight">
+        <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Operasyon etkisi</p>
+        <p className="mt-2 text-xl font-medium">Sahadaki bilgi artık kaybolmaz.</p>
+        <div className="mt-8 grid gap-6 md:grid-cols-4">
           {metrics.map(([title, desc]) => (
-            <div key={title} className="rounded-2xl bg-secondary p-5">
-              <p className="font-serif text-3xl text-primary">{title}</p>
+            <div key={title} className="border-l-2 border-primary/25 pl-5">
+              <p className="font-serif text-4xl md:text-5xl text-foreground">{title}</p>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc}</p>
             </div>
           ))}
@@ -203,8 +208,10 @@ const Problem = () => {
         </SectionIntro>
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {problems.map(([Icon, title, desc], i) => (
-            <motion.div key={title as string} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.05 }} className="rounded-2xl border border-border bg-card p-7">
-              <Icon className="h-5 w-5 text-primary" />
+            <motion.div key={title as string} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.05 }} className="rounded-2xl border border-border bg-card p-7 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-soft">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/8 text-primary">
+                <Icon className="h-5 w-5" />
+              </div>
               <h3 className="mt-4 font-serif text-2xl">{title as string}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc as string}</p>
             </motion.div>
@@ -250,18 +257,20 @@ const HowItWorks = () => {
     [BarChart3, "Yöneticiye hafıza ve içgörü sunar", "En çok sorulan konular, tekrar eden arızalar, eksik dokümanlar ve eğitim ihtiyaçları canlı görünür."],
   ];
   return (
-    <section id="nasil" className="bg-soft py-24">
+    <section id="nasil" className="bg-dark py-24">
       <div className="container-tight">
-        <SectionIntro title={<>WhatsApp mesajı, birkaç saniye içinde aksiyona dönüşür.</>} />
+        <div className="[&_h2]:text-white [&_p]:text-white/55">
+          <SectionIntro title={<>WhatsApp mesajı, birkaç saniye içinde aksiyona dönüşür.</>} />
+        </div>
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {steps.map(([Icon, title, desc], i) => (
-            <motion.div key={title as string} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.05 }} className="rounded-2xl border border-border bg-card p-7">
+            <motion.div key={title as string} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.05 }} className="rounded-2xl border border-white/8 bg-white/4 p-7 text-white">
               <div className="flex items-center justify-between">
-                <span className="font-serif text-5xl text-primary/70">{i + 1}</span>
+                <span className="font-serif text-6xl text-white/15">{i + 1}</span>
                 <Icon className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="mt-4 font-serif text-2xl">{title as string}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc as string}</p>
+              <h3 className="mt-4 font-serif text-xl text-white">{title as string}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-white/50">{desc as string}</p>
             </motion.div>
           ))}
         </div>
@@ -289,8 +298,8 @@ const ProductModules = () => {
         </SectionIntro>
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {modules.map(([Icon, title, desc], i) => (
-            <motion.div key={title as string} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.04 }} className="rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/40">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-soft text-primary"><Icon className="h-5 w-5" /></div>
+            <motion.div key={title as string} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.04 }} className="rounded-2xl border border-border bg-card p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-soft">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/8 text-primary"><Icon className="h-5 w-5" /></div>
               <h3 className="mt-5 font-serif text-xl">{title as string}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc as string}</p>
             </motion.div>
@@ -528,14 +537,17 @@ const FAQ = () => {
 const FinalCTA = () => (
   <section className="py-24">
     <div className="container-tight">
-      <div className="rounded-3xl border border-border bg-primary p-10 text-center text-primary-foreground shadow-glow md:p-16">
-        <h2 className="font-serif text-4xl md:text-5xl">Sahadaki bilgi artık WhatsApp’ta kaybolmasın.</h2>
-        <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/80">
-          Ekibiniz zaten WhatsApp'ta. saha.team ile o mesajlar artık kaybolmuyor — doğru cevabı alıyor, kayda dönüşüyor ve şirketinizin hafızasına ekleniyor.
-        </p>
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <Button asChild size="lg" variant="secondary" className="rounded-full"><a href="https://wa.me/358415773392?text=Merhaba%2C%20saha.team%27i%20denemek%20istiyorum.">WhatsApp'tan Dene <ArrowRight className="h-4 w-4" /></a></Button>
-          <Button asChild size="lg" variant="outline" className="rounded-full border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary"><a href="#iletisim">15 Dakikalık Demo Al</a></Button>
+      <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-dark p-10 text-center shadow-glow md:p-16">
+        <div className="pointer-events-none absolute inset-x-0 -top-24 mx-auto h-64 w-2/3 rounded-full bg-primary/30 blur-3xl" />
+        <div className="relative">
+          <h2 className="font-serif text-4xl text-white md:text-5xl">Sahadaki bilgi artık WhatsApp’ta kaybolmasın.</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-white/55">
+            Ekibiniz zaten WhatsApp'ta. saha.team ile o mesajlar artık kaybolmuyor — doğru cevabı alıyor, kayda dönüşüyor ve şirketinizin hafızasına ekleniyor.
+          </p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <Button asChild size="lg" variant="default" className="rounded-full shadow-glow"><a href="https://wa.me/358415773392?text=Merhaba%2C%20saha.team%27i%20denemek%20istiyorum.">WhatsApp'tan Dene <ArrowRight className="h-4 w-4" /></a></Button>
+            <Button asChild size="lg" variant="outline" className="rounded-full border-white/20 bg-transparent text-white hover:bg-white hover:text-foreground"><a href="#iletisim">15 Dakikalık Demo Al</a></Button>
+          </div>
         </div>
       </div>
     </div>
@@ -600,30 +612,30 @@ const Contact = () => {
 };
 
 const Footer = () => (
-  <footer className="border-t border-border bg-card py-12">
+  <footer className="bg-dark py-12">
     <div className="container-tight grid gap-10 md:grid-cols-4">
       <div className="md:col-span-2">
         <div>
           <img src="/logo-full.png" alt="saha.team" className="h-9 w-auto" />
         </div>
-        <p className="mt-4 max-w-md text-sm text-muted-foreground">Masabaşı olmayan ekipler için WhatsApp tabanlı operasyon hafızası.</p>
-        <p className="mt-4 text-xs text-muted-foreground">hi@saha.team<br />Teknopark İstanbul, Pendik / İstanbul</p>
+        <p className="mt-4 max-w-md text-sm text-white/45">Masabaşı olmayan ekipler için WhatsApp tabanlı operasyon hafızası.</p>
+        <p className="mt-4 text-xs text-white/35">hi@saha.team<br />Teknopark İstanbul, Pendik / İstanbul</p>
       </div>
       <div>
-        <p className="text-sm font-medium">Menü</p>
-        <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-          {menuItems.map(([label, href]) => <li key={label}><a href={href} className="hover:text-foreground">{label}</a></li>)}
+        <p className="text-sm font-medium text-white/70">Menü</p>
+        <ul className="mt-3 space-y-2 text-sm">
+          {menuItems.map(([label, href]) => <li key={label}><a href={href} className="hover:text-white text-white/40 transition-colors">{label}</a></li>)}
         </ul>
       </div>
       <div>
-        <p className="text-sm font-medium">Yasal</p>
-        <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-          {["KVKK Aydınlatma Metni", "Gizlilik Politikası", "Kullanım Şartları", "Veri İşleme Sözleşmesi"].map((item) => <li key={item}><a href="#" className="hover:text-foreground">{item}</a></li>)}
+        <p className="text-sm font-medium text-white/70">Yasal</p>
+        <ul className="mt-3 space-y-2 text-sm">
+          {["KVKK Aydınlatma Metni", "Gizlilik Politikası", "Kullanım Şartları", "Veri İşleme Sözleşmesi"].map((item) => <li key={item}><a href="#" className="hover:text-white text-white/40 transition-colors">{item}</a></li>)}
         </ul>
       </div>
     </div>
-    <div className="container-tight mt-10 border-t border-border pt-6 text-xs text-muted-foreground">
-      <p>© 2026 saha.team · Tüm hakları saklıdır.</p>
+    <div className="container-tight mt-10 border-t border-white/8 pt-6">
+      <p className="text-xs text-white/25">© 2026 saha.team · Tüm hakları saklıdır.</p>
     </div>
   </footer>
 );
