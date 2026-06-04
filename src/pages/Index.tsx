@@ -53,7 +53,7 @@ const menuItems = [
 ];
 
 const Nav = () => (
-  <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
+  <header className="sticky top-0 z-50 border-b border-border/40 bg-background/95 backdrop-blur-md">
     <div className="container-tight flex h-16 items-center justify-between gap-4">
       <a href="#top" className="flex items-center gap-2">
         <img src="/logo-full.png" alt="saha.team" className="h-9 w-auto" />
@@ -77,8 +77,8 @@ const Nav = () => (
 
 const SectionIntro = ({ eyebrow, title, children }: { eyebrow?: string; title: React.ReactNode; children?: React.ReactNode }) => (
   <motion.div {...fadeUp} className="max-w-3xl">
-    {eyebrow && <p className="text-sm font-medium text-primary">{eyebrow}</p>}
-    <h2 className="mt-3 text-4xl leading-tight md:text-5xl">{title}</h2>
+    {eyebrow && <p className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary tracking-wide">{eyebrow}</p>}
+    <h2 className="mt-4 text-4xl leading-[1.08] md:text-5xl">{title}</h2>
     {children && <p className="mt-4 text-lg leading-relaxed text-muted-foreground">{children}</p>}
   </motion.div>
 );
