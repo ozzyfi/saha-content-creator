@@ -616,7 +616,7 @@ const Footer = () => (
     <div className="container-tight grid gap-10 md:grid-cols-4">
       <div className="md:col-span-2">
         <div>
-          <img src="/logo-full.png" alt="saha.team" className="h-9 w-auto" />
+          <img src="/logo-full.png" alt="saha.team" className="h-9 w-auto brightness-0 invert opacity-80" />
         </div>
         <p className="mt-4 max-w-md text-sm text-white/45">Masabaşı olmayan ekipler için WhatsApp tabanlı operasyon hafızası.</p>
         <p className="mt-4 text-xs text-white/35">hi@saha.team<br />Teknopark İstanbul, Pendik / İstanbul</p>
