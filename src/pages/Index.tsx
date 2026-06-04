@@ -257,18 +257,20 @@ const HowItWorks = () => {
     [BarChart3, "Yöneticiye hafıza ve içgörü sunar", "En çok sorulan konular, tekrar eden arızalar, eksik dokümanlar ve eğitim ihtiyaçları canlı görünür."],
   ];
   return (
-    <section id="nasil" className="bg-soft py-24">
+    <section id="nasil" className="bg-dark py-24">
       <div className="container-tight">
-        <SectionIntro title={<>WhatsApp mesajı, birkaç saniye içinde aksiyona dönüşür.</>} />
+        <div className="[&_h2]:text-white [&_p]:text-white/55">
+          <SectionIntro title={<>WhatsApp mesajı, birkaç saniye içinde aksiyona dönüşür.</>} />
+        </div>
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {steps.map(([Icon, title, desc], i) => (
-            <motion.div key={title as string} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.05 }} className="rounded-2xl border border-border bg-card p-7">
+            <motion.div key={title as string} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.05 }} className="rounded-2xl border border-white/8 bg-white/4 p-7 text-white">
               <div className="flex items-center justify-between">
-                <span className="font-serif text-5xl text-primary/70">{i + 1}</span>
+                <span className="font-serif text-6xl text-white/15">{i + 1}</span>
                 <Icon className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="mt-4 font-serif text-2xl">{title as string}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc as string}</p>
+              <h3 className="mt-4 font-serif text-xl text-white">{title as string}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-white/50">{desc as string}</p>
             </motion.div>
           ))}
         </div>
