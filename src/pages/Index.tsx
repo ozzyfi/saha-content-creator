@@ -11,8 +11,6 @@ import {
   Clock,
   Database,
   FileText,
-  Globe2,
-  Image as ImageIcon,
   Languages,
   Leaf,
   Lock,
@@ -20,18 +18,15 @@ import {
   MapPin,
   MessageCircle,
   Mic,
-  
   Plug,
   QrCode,
   Search,
   ShieldCheck,
   ShoppingBag,
   Truck,
-  Upload,
   Users,
   UtensilsCrossed,
   Wrench,
-  Zap,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
