@@ -68,7 +68,7 @@ const Nav = () => (
           <a href="#iletisim">Demo Al</a>
         </Button>
         <Button asChild size="sm" className="rounded-full">
-          <a href="https://wa.me/905555555555?text=Merhaba%2C%20saha.team%27i%20denemek%20istiyorum."><MessageCircle className="h-4 w-4" /> WhatsApp'tan Dene</a>
+          <a href="https://wa.me/358415773392?text=Merhaba%2C%20saha.team%27i%20denemek%20istiyorum."><MessageCircle className="h-4 w-4" /> WhatsApp'tan Dene</a>
         </Button>
       </div>
     </div>
@@ -125,7 +125,7 @@ const Hero = () => (
         <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted-foreground">QR kodu okutun, WhatsApp'tan mesaj gönderin — başka bir adım yok.</p>
         <div className="mt-8 flex flex-wrap items-center gap-3">
           <Button asChild size="lg" className="rounded-full shadow-glow">
-            <a href="https://wa.me/905555555555?text=Merhaba%2C%20saha.team%27i%20denemek%20istiyorum.">WhatsApp'tan Dene <ArrowRight className="h-4 w-4" /></a>
+            <a href="https://wa.me/358415773392?text=Merhaba%2C%20saha.team%27i%20denemek%20istiyorum.">WhatsApp'tan Dene <ArrowRight className="h-4 w-4" /></a>
           </Button>
           <Button asChild size="lg" variant="outline" className="rounded-full">
             <a href="#iletisim">15 Dakikalık Demo Al</a>
@@ -534,7 +534,7 @@ const FinalCTA = () => (
           Ekibiniz zaten WhatsApp'ta. saha.team ile o mesajlar artık kaybolmuyor — doğru cevabı alıyor, kayda dönüşüyor ve şirketinizin hafızasına ekleniyor.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <Button asChild size="lg" variant="secondary" className="rounded-full"><a href="https://wa.me/905555555555?text=Merhaba%2C%20saha.team%27i%20denemek%20istiyorum.">WhatsApp'tan Dene <ArrowRight className="h-4 w-4" /></a></Button>
+          <Button asChild size="lg" variant="secondary" className="rounded-full"><a href="https://wa.me/358415773392?text=Merhaba%2C%20saha.team%27i%20denemek%20istiyorum.">WhatsApp'tan Dene <ArrowRight className="h-4 w-4" /></a></Button>
           <Button asChild size="lg" variant="outline" className="rounded-full border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary"><a href="#iletisim">15 Dakikalık Demo Al</a></Button>
         </div>
       </div>
