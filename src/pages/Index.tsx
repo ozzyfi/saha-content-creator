@@ -363,28 +363,30 @@ const WhyWhatsApp = () => (
 );
 
 const Dashboard = () => (
-  <section className="bg-soft py-24">
+  <section className="bg-dark py-24">
     <div className="container-tight grid gap-12 md:grid-cols-2 md:items-center">
-      <SectionIntro title={<>Kullanım sahada, kontrol merkezde.</>}>
-        saha.team paneli; yanıtlanan soruları, CRM’e işlenen notları, açılan görevleri, tekrar eden problemleri, eksik dokümanları ve kurtarılan yönetici zamanını görünür hale getirir.
-      </SectionIntro>
-      <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.1 }} className="rounded-2xl border border-border bg-card p-5 shadow-soft">
-        <div className="flex items-center justify-between border-b border-border/60 pb-3 text-xs text-muted-foreground">
+      <div className="[&_h2]:text-white [&_p]:text-white/55">
+        <SectionIntro title={<>Kullanım sahada, kontrol merkezde.</>}>
+          saha.team paneli; yanıtlanan soruları, CRM’e işlenen notları, açılan görevleri, tekrar eden problemleri, eksik dokümanları ve kurtarılan yönetici zamanını görünür hale getirir.
+        </SectionIntro>
+      </div>
+      <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.1 }} className="rounded-2xl border border-white/10 bg-white/6 p-5">
+        <div className="flex items-center justify-between border-b border-white/10 pb-3 text-xs text-white/55">
           <span>saha.team / merkez panel</span>
           <span className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-primary" /> canlı</span>
         </div>
         <div className="mt-5 grid grid-cols-2 gap-3">
-          <div className="rounded-xl bg-primary-soft p-4"><p className="text-xs text-muted-foreground">Bu ay yanıtlanan soru</p><p className="mt-1 font-serif text-3xl text-primary">8.412</p></div>
-          <div className="rounded-xl bg-secondary p-4"><p className="text-xs text-muted-foreground">CRM’e işlenen not</p><p className="mt-1 font-serif text-3xl">2.184</p></div>
-          <div className="rounded-xl bg-secondary p-4"><p className="text-xs text-muted-foreground">Açılan görev</p><p className="mt-1 font-serif text-3xl">431</p></div>
-          <div className="rounded-xl bg-primary-soft p-4"><p className="text-xs text-muted-foreground">Kurtarılan saat</p><p className="mt-1 font-serif text-3xl text-primary">1.247</p></div>
+          <div className="rounded-xl bg-primary/15 p-4"><p className="text-xs text-white/55">Bu ay yanıtlanan soru</p><p className="mt-1 font-serif text-3xl text-primary">8.412</p></div>
+          <div className="rounded-xl bg-white/6 p-4"><p className="text-xs text-white/55">CRM’e işlenen not</p><p className="mt-1 font-serif text-3xl text-white">2.184</p></div>
+          <div className="rounded-xl bg-white/6 p-4"><p className="text-xs text-white/55">Açılan görev</p><p className="mt-1 font-serif text-3xl text-white">431</p></div>
+          <div className="rounded-xl bg-primary/15 p-4"><p className="text-xs text-white/55">Kurtarılan saat</p><p className="mt-1 font-serif text-3xl text-primary">1.247</p></div>
         </div>
-        <div className="mt-4 rounded-xl bg-secondary p-4">
-          <p className="text-xs text-muted-foreground">Bilgi boşluğu analizi</p>
+        <div className="mt-4 rounded-xl bg-white/6 p-4">
+          <p className="text-xs text-white/55">Bilgi boşluğu analizi</p>
           {[["İade prosedürü", 92], ["Kasa kapanışı", 68], ["Klima arızaları", 54]].map(([label, value]) => (
             <div key={label as string} className="mt-3">
-              <div className="flex justify-between text-xs"><span>{label as string}</span><span className="text-muted-foreground">{value as number} kez</span></div>
-              <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-background"><div className="h-full bg-primary" style={{ width: `${value}%` }} /></div>
+              <div className="flex justify-between text-xs text-white"><span>{label as string}</span><span className="text-white/55">{value as number} kez</span></div>
+              <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-white/10"><div className="h-full bg-primary" style={{ width: `${value}%` }} /></div>
             </div>
           ))}
         </div>
