@@ -85,8 +85,8 @@ const SectionIntro = ({ eyebrow, title, children }: { eyebrow?: string; title: R
 
 const ChatBubble = ({ from, name, text, source }: { from: "user" | "bot"; name?: string; text: string; source?: string }) => (
   <div className={`flex ${from === "user" ? "justify-end" : "justify-start"}`}>
-    <div className={`max-w-[86%] rounded-xl px-3 py-2 text-xs shadow-soft ${from === "user" ? "rounded-br-sm bg-primary-soft text-foreground" : "rounded-bl-sm bg-card text-foreground"}`}>
-      {name && <p className="mb-1 text-xs font-medium text-primary">{name}</p>}
+    <div className={`max-w-[86%] rounded-xl px-3 py-2 text-xs shadow-soft ${from === "user" ? "rounded-br-sm bg-white/10 text-white/90" : "rounded-bl-sm bg-card text-foreground"}`}>
+      {name && <p className={`mb-1 text-xs font-medium ${from === "user" ? "text-white/70" : "text-primary"}`}>{name}</p>}
       <p className="whitespace-pre-line leading-relaxed">{text}</p>
       {source && <p className="mt-2 text-[11px] text-muted-foreground">Kaynak: <span className="text-primary">{source}</span></p>}
     </div>
@@ -94,8 +94,8 @@ const ChatBubble = ({ from, name, text, source }: { from: "user" | "bot"; name?:
 );
 
 const FlowCard = () => (
-  <div className="mt-3 rounded-xl border border-border bg-card p-3 shadow-soft">
-    <p className="text-xs font-medium text-muted-foreground">Otomatik akış</p>
+  <div className="mt-3 rounded-xl border border-white/10 bg-white/6 p-3">
+    <p className="text-xs font-medium text-white/60">Otomatik akış</p>
     <div className="mt-2 grid grid-cols-2 gap-2 text-[11px]">
       {[
         [MessageCircle, "WhatsApp mesajı"],
@@ -103,7 +103,7 @@ const FlowCard = () => (
         [Database, "CRM kaydı"],
         [BarChart3, "Yönetici içgörüsü"],
       ].map(([Icon, label], index) => (
-        <div key={label as string} className="relative rounded-lg bg-secondary p-2">
+        <div key={label as string} className="relative rounded-lg bg-white/6 p-2 text-white/80">
           <Icon className="h-3.5 w-3.5 text-primary" />
           <p className="mt-1 font-medium leading-tight">{label as string}</p>
           {index < 3 && index !== 1 && <ArrowRight className="absolute -right-2 top-1/2 h-3 w-3 -translate-y-1/2 text-primary" />}
@@ -114,37 +114,41 @@ const FlowCard = () => (
 );
 
 const Hero = () => (
-  <section id="top" className="relative overflow-hidden bg-hero">
+  <section id="top" className="relative overflow-hidden bg-dark">
     <div className="container-tight grid items-center gap-10 py-14 md:grid-cols-[1.05fr_0.95fr] md:py-20">
       <motion.div {...fadeUp}>
-        <h1 className="text-5xl leading-[1.05] md:text-6xl">Saha ekibinizin WhatsApp’taki yardımcısı.</h1>
-        <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground md:text-xl">
+        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-white/70">
+          <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+          WhatsApp AI · Saha Hafızası
+        </div>
+        <h1 className="text-5xl leading-[1.02] text-white md:text-6xl lg:text-7xl">Saha ekibinizin WhatsApp’taki yardımcısı.</h1>
+        <p className="mt-5 max-w-xl text-lg leading-relaxed text-light-muted md:text-xl">
           Saha ekibiniz WhatsApp’tan yazar, konuşur, fotoğraf ya da doküman gönderir. saha.team doğru cevabı verir, gelen bilgiyi anlamlandırır, ilgili kayda işler ve şirketiniz için kalıcı saha hafızası oluşturur.
         </p>
-        <p className="mt-4 text-base font-medium text-foreground">Uygulama yok. Şifre yok. Eğitim yok.</p>
-        <p className="mt-2 max-w-lg text-sm leading-relaxed text-muted-foreground">QR kodu okutun, WhatsApp'tan mesaj gönderin — başka bir adım yok.</p>
+        <p className="mt-5 text-base font-semibold text-primary">Uygulama yok. Şifre yok. Eğitim yok.</p>
+        <p className="mt-2 max-w-lg text-sm leading-relaxed text-light-muted">QR kodu okutun, WhatsApp'tan mesaj gönderin — başka bir adım yok.</p>
         <div className="mt-8 flex flex-wrap items-center gap-3">
           <Button asChild size="lg" className="rounded-full shadow-glow">
             <a href="https://wa.me/358415773392?text=Merhaba%2C%20saha.team%27i%20denemek%20istiyorum.">WhatsApp'tan Dene <ArrowRight className="h-4 w-4" /></a>
           </Button>
-          <Button asChild size="lg" variant="outline" className="rounded-full">
+          <Button asChild size="lg" variant="outline" className="rounded-full border-white/20 bg-transparent text-white hover:bg-white hover:text-foreground">
             <a href="#iletisim">15 Dakikalık Demo Al</a>
           </Button>
         </div>
-        <p className="mt-6 max-w-xl text-sm font-medium leading-relaxed text-foreground">
+        <p className="mt-6 max-w-xl text-sm font-medium leading-relaxed text-white/70">
           Soru cevaplar · Bildirimi kayıt eder · CRM'e işler · Kör noktaları gösterir
         </p>
       </motion.div>
 
       <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.1 }}>
-        <div className="relative mx-auto max-w-lg rounded-3xl border border-border bg-card p-2 shadow-soft">
-          <div className="rounded-[1.25rem] bg-soft p-3">
-            <div className="mb-3 flex items-center gap-2 border-b border-border/60 pb-2">
+        <div className="relative mx-auto max-w-lg rounded-3xl border border-white/10 bg-white/5 p-2 shadow-soft backdrop-blur-sm">
+          <div className="rounded-[1.25rem] bg-white/4 p-3">
+            <div className="mb-3 flex items-center gap-2 border-b border-white/10 pb-2">
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground">
                 <MessageCircle className="h-4 w-4" />
               </div>
               <div>
-                <p className="text-xs font-medium">saha.team Asistan</p>
+                <p className="text-xs font-medium text-white/80">saha.team Asistan</p>
                 <p className="text-[11px] text-primary">çevrimiçi</p>
               </div>
             </div>
