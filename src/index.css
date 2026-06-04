@@ -68,4 +68,8 @@
   .shadow-soft { box-shadow: var(--shadow-soft); }
   .shadow-glow { box-shadow: var(--shadow-glow); }
   .container-tight { @apply mx-auto max-w-6xl px-6; }
+  .bg-dark { background: hsl(220 22% 7%); }
+  .text-light { color: hsl(0 0% 97%); }
+  .text-light-muted { color: hsl(0 0% 97% / 0.50); }
+  .border-light { border-color: hsl(0 0% 97% / 0.09); }
 }
