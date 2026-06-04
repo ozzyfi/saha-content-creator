@@ -612,30 +612,30 @@ const Contact = () => {
 };
 
 const Footer = () => (
-  <footer className="border-t border-border bg-card py-12">
+  <footer className="bg-dark py-12">
     <div className="container-tight grid gap-10 md:grid-cols-4">
       <div className="md:col-span-2">
         <div>
           <img src="/logo-full.png" alt="saha.team" className="h-9 w-auto" />
         </div>
-        <p className="mt-4 max-w-md text-sm text-muted-foreground">Masabaşı olmayan ekipler için WhatsApp tabanlı operasyon hafızası.</p>
-        <p className="mt-4 text-xs text-muted-foreground">hi@saha.team<br />Teknopark İstanbul, Pendik / İstanbul</p>
+        <p className="mt-4 max-w-md text-sm text-white/45">Masabaşı olmayan ekipler için WhatsApp tabanlı operasyon hafızası.</p>
+        <p className="mt-4 text-xs text-white/35">hi@saha.team<br />Teknopark İstanbul, Pendik / İstanbul</p>
       </div>
       <div>
-        <p className="text-sm font-medium">Menü</p>
-        <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-          {menuItems.map(([label, href]) => <li key={label}><a href={href} className="hover:text-foreground">{label}</a></li>)}
+        <p className="text-sm font-medium text-white/70">Menü</p>
+        <ul className="mt-3 space-y-2 text-sm">
+          {menuItems.map(([label, href]) => <li key={label}><a href={href} className="hover:text-white text-white/40 transition-colors">{label}</a></li>)}
         </ul>
       </div>
       <div>
-        <p className="text-sm font-medium">Yasal</p>
-        <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-          {["KVKK Aydınlatma Metni", "Gizlilik Politikası", "Kullanım Şartları", "Veri İşleme Sözleşmesi"].map((item) => <li key={item}><a href="#" className="hover:text-foreground">{item}</a></li>)}
+        <p className="text-sm font-medium text-white/70">Yasal</p>
+        <ul className="mt-3 space-y-2 text-sm">
+          {["KVKK Aydınlatma Metni", "Gizlilik Politikası", "Kullanım Şartları", "Veri İşleme Sözleşmesi"].map((item) => <li key={item}><a href="#" className="hover:text-white text-white/40 transition-colors">{item}</a></li>)}
         </ul>
       </div>
     </div>
-    <div className="container-tight mt-10 border-t border-border pt-6 text-xs text-muted-foreground">
-      <p>© 2026 saha.team · Tüm hakları saklıdır.</p>
+    <div className="container-tight mt-10 border-t border-white/8 pt-6">
+      <p className="text-xs text-white/25">© 2026 saha.team · Tüm hakları saklıdır.</p>
     </div>
   </footer>
 );
