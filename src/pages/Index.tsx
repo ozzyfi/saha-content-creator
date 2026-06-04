@@ -298,8 +298,8 @@ const ProductModules = () => {
         </SectionIntro>
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {modules.map(([Icon, title, desc], i) => (
-            <motion.div key={title as string} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.04 }} className="rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/40">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-soft text-primary"><Icon className="h-5 w-5" /></div>
+            <motion.div key={title as string} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.04 }} className="rounded-2xl border border-border bg-card p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-soft">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/8 text-primary"><Icon className="h-5 w-5" /></div>
               <h3 className="mt-5 font-serif text-xl">{title as string}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc as string}</p>
             </motion.div>
