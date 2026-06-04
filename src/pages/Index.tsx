@@ -174,13 +174,14 @@ const Metrics = () => {
     ["CRM'e otomatik kayıt", "Sahadan gelen not, fotoğraf ve bildirim ilgili kayda otomatik işlenir."],
   ];
   return (
-    <section className="border-y border-border bg-card/60">
-      <div className="container-tight py-10">
-        <p className="text-xl font-medium">Sahadaki bilgi artık kaybolmaz.</p>
-        <div className="mt-6 grid gap-5 md:grid-cols-4">
+    <section className="border-y border-border py-14">
+      <div className="container-tight">
+        <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Operasyon etkisi</p>
+        <p className="mt-2 text-xl font-medium">Sahadaki bilgi artık kaybolmaz.</p>
+        <div className="mt-8 grid gap-6 md:grid-cols-4">
           {metrics.map(([title, desc]) => (
-            <div key={title} className="rounded-2xl bg-secondary p-5">
-              <p className="font-serif text-3xl text-primary">{title}</p>
+            <div key={title} className="border-l-2 border-primary/25 pl-5">
+              <p className="font-serif text-4xl md:text-5xl text-foreground">{title}</p>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc}</p>
             </div>
           ))}
